@@ -78,6 +78,8 @@ void CollideConvexVsTriangles::Collide(Vec3Arg inV0, Vec3Arg inV1, Vec3Arg inV2,
 
 	// Perform GJK step
 	float max_separation_distance = mCollideShapeSettings.mMaxSeparationDistance;
+	if (penetration_axis.IsNearZero())
+		return;
 	status = pen_depth.GetPenetrationDepthStepGJK(*mShape1ExCvxRadius, mShape1ExCvxRadius->GetConvexRadius() + max_separation_distance, triangle, 0.0f, mCollideShapeSettings.mCollisionTolerance, penetration_axis, point1, point2);
 
 	// Check result of collision detection
