@@ -110,7 +110,7 @@ public:
 		// Note that if the assert below triggers, it is very likely that you have a MeshShape that contains a degenerate triangle (e.g. a sliver).
 		// Go up a couple of levels in the call stack to see if we're indeed testing a triangle and if it is degenerate.
 		// If this is the case then fix the triangles you supply to the MeshShape.
-		JPH_ASSERT(!ioV.IsNearZero());
+		JPH_ASSERT(!ioV.IsNearZero(), "GetPenetrationDepthStepGJK: ioV.IsNearZero()");
 
 		// Get closest points
 		float combined_radius = inConvexRadiusA + inConvexRadiusB;
