@@ -316,6 +316,7 @@ static TestNameAndRTTI sRigTests[] =
 
 JPH_DECLARE_RTTI_FOR_FACTORY(JPH_NO_EXPORT, CharacterTest)
 JPH_DECLARE_RTTI_FOR_FACTORY(JPH_NO_EXPORT, CharacterVirtualTest)
+JPH_DECLARE_RTTI_FOR_FACTORY(JPH_NO_EXPORT, CharacterVirtualTest2)
 JPH_DECLARE_RTTI_FOR_FACTORY(JPH_NO_EXPORT, CharacterSpaceShipTest)
 JPH_DECLARE_RTTI_FOR_FACTORY(JPH_NO_EXPORT, CharacterPlanetTest)
 
@@ -323,6 +324,7 @@ static TestNameAndRTTI sCharacterTests[] =
 {
 	{ "Character",							JPH_RTTI(CharacterTest) },
 	{ "Character Virtual",					JPH_RTTI(CharacterVirtualTest) },
+	{ "Character Virtual (2)",				JPH_RTTI(CharacterVirtualTest2) },
 	{ "Character Virtual vs Space Ship",	JPH_RTTI(CharacterSpaceShipTest) },
 	{ "Character Virtual vs Planet",		JPH_RTTI(CharacterPlanetTest) },
 };
